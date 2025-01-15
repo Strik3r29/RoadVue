@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>RoadVue: Revolutionize Your Drive</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> <!-- Three.js library -->
 </head>
 <body>
     <header>
@@ -32,10 +33,35 @@
                 <li><strong>Enhanced Road Safety:</strong> Accurate lane departure alerts for safer driving.</li>
             </ul>
         </section>
+        <section id="threeDContainer" style="width: 100%; height: 400px;"></section> <!-- 3D container -->
     </main>
     <footer>
         <p>&copy; 2025 RoadVue. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        // 3D Scene Setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, 400);
+        document.getElementById('threeDContainer').appendChild(renderer.domElement);
+
+        // Add a simple cube
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshBasicMaterial({ color: 0x007BFF });
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
 </body>
 </html>
