@@ -2,44 +2,37 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
 }
 
 header {
-    background: #333;
+    background: #1f1f1f; /* Darker header */
     color: #fff;
     padding: 10px 0;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    color: #e0e0e0; /* Light link color */
 }
 
 .hero {
     text-align: center;
     padding: 50px 0;
-    background: #007BFF;
+    background: #007BFF; /* Bright accent color */
     color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
 }
 
 .features {
     padding: 20px;
+    background: #1f1f1f; /* Dark background for features */
+    border-radius: 8px; /* Rounded corners */
 }
 
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #333;
+    background: #1f1f1f; /* Dark footer */
     color: #fff;
 }
