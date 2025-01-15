@@ -1,6 +1,8 @@
-/my-website
+/roadvue
     ├── index.html
     ├── about.html
     ├── contact.html
+    ├── dashboard.html
     ├── styles.css
-    └── script.js
+    ├── script.js
+    └── api.js
